@@ -32,11 +32,10 @@ sources/0 = SubResource("TileSetAtlasSource_sy4xl")
 script = ExtResource("1_2qbtv")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_07j4f")]
-position = Vector2(537, -32)
-SPEED = 69.0
+position = Vector2(370, -88)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(-3, -42)
+position = Vector2(-1, -48)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -78,7 +77,7 @@ texture_filter = 1
 tile_set = SubResource("TileSet_2tmwx")
 format = 2
 
-[node name="Grass" type="TileMap" parent="."]
+[node name="Grass" type="TileMap" parent="." groups=["grass"]]
 texture_filter = 1
 tile_set = SubResource("TileSet_q0tmv")
 format = 2
