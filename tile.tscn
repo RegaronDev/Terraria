@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://ud20aeixvyf2"]
+
+[ext_resource type="Texture2D" uid="uid://bimxf3x72dyei" path="res://Tiles.png" id="1_3gu5n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2fxk"]
+size = Vector2(16, 16)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_3gu5n")
+hframes = 2
+vframes = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" groups=["dirt"]]
+shape = SubResource("RectangleShape2D_g2fxk")
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, 0)
+texture = ExtResource("1_3gu5n")
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D" groups=["mud"]]
+shape = SubResource("RectangleShape2D_g2fxk")
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, 0)
+texture = ExtResource("1_3gu5n")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite3/StaticBody2D" groups=["stone"]]
+shape = SubResource("RectangleShape2D_g2fxk")
